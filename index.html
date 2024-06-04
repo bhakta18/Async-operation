@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getUserData(id, callback) {
+    setTimeout(() => {
+        const user = {
+            id: id,
+            name: "John Doe",
+            email: "johndoe@example.com"
+        };
+        callback(user);
+    }, 2000);
+}
+
+// Example usage:
+getUserData(1, (user) => {
+    console.log(user);
+});
+
+
+
+function getUserData(id, callback) {
+    setTimeout(() => {
+        const user = {
+            id: id,
+            name: "John Doe",
+            email: "johndoe@example.com"
+        };
+        callback(user);
+    }, 2000);
+}
+
+function displayUser(user) {
+    console.log(`User ID: ${user.id}`);
+    console.log(`Name: ${user.name}`);
+    console.log(`Email: ${user.email}`);
+}
+
+// Test the program by fetching user data asynchronously
+getUserData(1, displayUser);
+
+
+    </script>
+</body>
+</html>
